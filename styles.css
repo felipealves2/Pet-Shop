@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px;
+  color: #03aa2d;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px 0px;
+  color: #207535;
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+
+/* CONFIGURAÇÃO DO ÁREA HEADER */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px;
+}
+
+div.logo {
+  font-size: 3rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgba(21, 102, 102, 0.596);
+}
+
+.amarelo {
+  color: rgb(233, 218, 16);
+}
+
+.hamburguer {
+  display: none;
+}
+
+nav.menu{
+  display: flex;
+}
+
+nav.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(67, 134, 113);
+}
+
+.menu a:hover {
+  text-decoration: underline;
+  color: #e8ec00;
+  font-weight: 700;
+}
+
+/* CONFIGURAÇÃO DA ÁREA MAIN */
+
+div.container {
+}
+
+section.hero {
+  display: flex;
+  position: relative;
+  background-color: rgb(18, 60, 88);
+  color: white;
+  margin: 10px 30px;
+  padding: 40px 0;
+  border-radius: 20px;
+  height: 70vh;
+  align-items: center;
+  text-align: center;
+}
+
+.hero_conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.hero_acoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aqua;
+  gap: 17px;
+}
+
+.hero_acoes a {
+  color: rgb(138, 173, 204);
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.hero_acoes a:hover {
+  color: #e8ec00;
+  text-decoration: underline;
+}
+
+.hero_acoes button {
+  padding: 16px 23px;
+  background: #e8ec00;
+  color: #0b59ac;
+  border: 0;
+  border-radius: 10px;
+  font-weight: 800;
+}
+
+.sobre {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  gap: 10px;
+}
+
+.sobre_info {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+
+.sobre_indicadores {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.sobre_indicador_item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sobre_indicador_item strong {
+  font-size: 40px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #05bb69;
+  font-weight: bolder;
+}
+
+.sobre_imagem {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #e8ec00;
+  width: 30rem;
+  border-radius: 9px;
+  height: 200px;
+}
+
+.contato {
+  background-color: #37593f;
+  color: white;
+  padding: 3rem 0;
+}
+
+.contato .titulo_secao {
+  color: white;
+}
+
+.contato_container {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.contato_info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 5px;
+}
+
+.contato_info p {
+  display: flex;
+  gap: 7px;
+}
+
+.contato_formulario {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contato_formulario input {
+  width: 100%;
+  padding: 8px 16px;
+  border: 0;
+  border-radius: 16px;
+}
+
+.contato_formulario textarea{
+  border-radius: 18px;
+  text-align: center;
+}
+
+.contato_formulario button {
+  padding: 8px 16px;
+  width: 100%;
+  border: 0;
+  background: yellow;
+  color: #00da6d;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* @@@@@@@   CONFIGURAÇÃO PARA RESPONSIVIDADE @@@@@@@@@@*/
+/* CABAÇALHO */
+
+@media(max-width:800px){
+  .cabecalho{
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+}
+
+
+/*  IMAGEM ROTWALLE */
+.hero_imagem img {
+  width: 560px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media (max-width: 1500px) {
+  section.hero {
+    height: 50vh;
+  }
+
+  .hero_imagem img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 860px) {
+  .hero_imagem img {
+    display: none;
+  }
+
+  section.hero {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/*  AREA SOBRE  */
+
+@media (max-width: 860px) {
+  .sobre_info,
+  .sobre {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .sobre_imagem {
+    justify-content: center;
+    align-self: center;
+  }
+}
