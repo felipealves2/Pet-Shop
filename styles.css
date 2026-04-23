@@ -284,3 +284,13 @@ section.hero {
     align-self: center;
   }
 }
+
+/* AREA CONTATO */
+
+@media(max-width:500px){
+  .contato_container{
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
